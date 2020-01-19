@@ -1,0 +1,21 @@
+image:
+  name: hashicorp/terraform:light
+  entrypoint:
+    - '/usr/bin/env'
+    - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+
+cache:
+  paths:
+    - .terraform
+
+before_script:
+  - terraform --version
+
+stages:
+  - format
+
+format:
+  stage: format
+  script:
+    - terraform fmt -check
+
