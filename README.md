@@ -20,8 +20,8 @@ Alarms Always Created:
 ## Example
 
 ```hcl-terraform
-module "aws-efs-alarms" {
-  source            = "lorenzoaiello/nat-alarms/aws"
+module "aws-alb-alarms" {
+  source            = "lorenzoaiello/alb-alarms/aws"
   version           = "x.y.z"
 }
 
