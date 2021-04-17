@@ -44,7 +44,7 @@ resource "aws_cloudwatch_metric_alarm" "target_response_time_average" {
   period              = var.statistic_period
   statistic           = "Average"
   threshold           = var.response_time_threshold
-  alarm_description   = format("Average API response time is great than %s", var.response_time_threshold)
+  alarm_description   = format("Average API response time is greater than %s", var.response_time_threshold)
   alarm_actions       = var.actions_alarm
   ok_actions          = var.actions_ok
 
