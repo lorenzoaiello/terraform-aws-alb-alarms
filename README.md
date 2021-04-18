@@ -12,10 +12,11 @@ Alarms Always Created:
 - Any 5xx errors from the target group
 - Any 5xx errors from the load balancer
 - Unacceptably high average response times
+- Number of unhealthy hosts
 
-**Estimated Operating Cost**: $ 0.30 / month
+**Estimated Operating Cost**: $ 0.40 / month
 
-- $ 0.10 / month for Metric Alarms (3x)
+- $ 0.10 / month for Metric Alarms (4x)
 
 ## Example
 
@@ -37,6 +38,7 @@ module "aws-alb-alarms" {
 | load\_balancer\_id | ALB ID | `string` | n/a | yes |
 | prefix | Alarm Name Prefix | `string` | `""` | no |
 | response\_time\_threshold | The average number of milliseconds that requests should complete within. | `string` | `"50"` | no |
+| unhealthy\_hosts\_threshold | The number of unhealthy hosts. | `string` | `"0"` | no |
 | statistic\_period | The number of seconds that make each statistic period. | `string` | `"60"` | no |
 | target\_group\_id | Target Group ID | `string` | n/a | yes |
 
