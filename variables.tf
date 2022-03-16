@@ -26,6 +26,12 @@ variable "unhealthy_hosts_threshold" {
   description = "The number of unhealthy hosts."
 }
 
+variable "healthy_hosts_threshold" {
+  type        = string
+  default     = "0"
+  description = "The number of healthy hosts."
+}
+
 variable "evaluation_period" {
   type        = string
   default     = "5"
