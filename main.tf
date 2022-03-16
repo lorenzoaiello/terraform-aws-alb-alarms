@@ -75,14 +75,14 @@ resource "aws_cloudwatch_metric_alarm" "unhealthy_hosts" {
 
 resource "aws_cloudwatch_metric_alarm" "healthy_hosts" {
   alarm_name          = "${var.prefix}alb-tg-${var.target_group_id}-healthy-hosts"
-  comparison_operator = "GreaterThanThreshold"
+  comparison_operator = "LessThanOrEqualToThreshold"
   evaluation_periods  = var.evaluation_period
   metric_name         = "HealthyHostCount"
   namespace           = "AWS/ApplicationELB"
   period              = var.statistic_period
   statistic           = "Minimum"
   threshold           = var.healthy_hosts_threshold
-  alarm_description   = format("Healthy host count is greater than %s", var.healthy_hosts_threshold)
+  alarm_description   = format("Healthy host count is less than or equal to %s", var.healthy_hosts_threshold)
   alarm_actions       = var.actions_alarm
   ok_actions          = var.actions_ok
 
