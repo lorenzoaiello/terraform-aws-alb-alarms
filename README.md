@@ -1,6 +1,6 @@
-# Terraform Module for AWS ALB Cloudwatch Alarms
+# Terraform Module for AWS ALB CloudWatch Alarms
 
-This Terraform module manages Cloudwatch Alarms for an ALB in the region. It does NOT create or manage Load Balancers, only Metric Alarms.
+This Terraform module manages CloudWatch Alarms for an ALB in the region. It does NOT create or manage Load Balancers, only Metric Alarms.
 
 **Requires**:
 
@@ -15,10 +15,11 @@ Alarms Always Created:
 - Any 5xx errors from the load balancer
 - Unacceptably high average response times
 - Number of unhealthy hosts
+- Number of healthy hosts
 
-**Estimated Operating Cost**: $ 0.40 / month
+**Estimated Operating Cost**: $ 0.50 / month
 
-- $ 0.10 / month for Metric Alarms (4x)
+- $ 0.10 / month for Metric Alarms (5x)
 
 ## Example
 

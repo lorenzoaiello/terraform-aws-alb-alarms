@@ -73,7 +73,6 @@ resource "aws_cloudwatch_metric_alarm" "unhealthy_hosts" {
   }
 }
 
-
 resource "aws_cloudwatch_metric_alarm" "healthy_hosts" {
   alarm_name          = "${var.prefix}alb-tg-${var.target_group_id}-healthy-hosts"
   comparison_operator = "GreaterThanThreshold"
