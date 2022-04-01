@@ -16,8 +16,8 @@ variable "prefix" {
 
 variable "response_time_threshold" {
   type        = string
-  default     = "50"
-  description = "The average number of milliseconds that requests should complete within."
+  default     = "1"
+  description = "The average number of seconds that requests should complete within."
 }
 
 variable "unhealthy_hosts_threshold" {
