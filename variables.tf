@@ -16,7 +16,7 @@ variable "prefix" {
 
 variable "response_time_threshold" {
   type        = string
-  default     = "1"
+  default     = "0.05"
   description = "The average number of seconds that requests should complete within."
 }
 
