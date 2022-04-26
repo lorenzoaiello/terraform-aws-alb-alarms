@@ -1,4 +1,4 @@
-# Terraform Module for AWS ALB CloudWatch Alarms
+# AWS ELB Cloudwatch
 
 This Terraform module manages CloudWatch Alarms for an ALB in the region. It does NOT create or manage Load Balancers, only Metric Alarms.
 
