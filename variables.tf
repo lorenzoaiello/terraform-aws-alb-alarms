@@ -1,11 +1,11 @@
-variable "load_balancer_id" {
+variable "load_balancer_arn" {
   type        = string
-  description = "ALB ID"
+  description = "ELB ARN"
 }
 
-variable "target_group_id" {
+variable "target_group_arn" {
   type        = string
-  description = "Target Group ID"
+  description = "Target Group ARN"
 }
 
 variable "prefix" {
