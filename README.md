@@ -43,6 +43,8 @@ module "aws-alb-alarms" {
 | response_time_threshold   | The average number of milliseconds that requests should complete within.                                 | `string` | `"50"`  |    no    |
 | unhealthy_hosts_threshold | The number of unhealthy hosts.                                                                           | `string` | `"0"`   |    no    |
 | healthy_hosts_threshold   | The number of healthy hosts.                                                                             | `string` | `"0"`   |    no    |
+| httpcode_target_5xx_count_threshold | The number of target 5xx errors to trigger the alarm                                           | `string` | `"0"`   |    no    |
+| httpcode_lb_5xx_count_threshold | The number of lb 5xx errors to trigger the alarm                                                   | `string` | `"0"`   |    no    |
 | statistic_period          | The number of seconds that make each statistic period.                                                   | `string` | `"60"`  |    no    |
 | target_group_id           | Target Group ID                                                                                          | `string` | n/a     |   yes    |
 

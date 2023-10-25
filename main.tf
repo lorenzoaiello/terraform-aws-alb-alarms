@@ -6,7 +6,7 @@ resource "aws_cloudwatch_metric_alarm" "httpcode_target_5xx_count" {
   namespace           = "AWS/ApplicationELB"
   period              = var.statistic_period
   statistic           = "Sum"
-  threshold           = "0"
+  threshold           = var.httpcode_target_5xx_count_threshold
   alarm_description   = "Average API 5XX target group error code count is too high"
   alarm_actions       = var.actions_alarm
   ok_actions          = var.actions_ok
@@ -25,7 +25,7 @@ resource "aws_cloudwatch_metric_alarm" "httpcode_lb_5xx_count" {
   namespace           = "AWS/ApplicationELB"
   period              = var.statistic_period
   statistic           = "Sum"
-  threshold           = "0"
+  threshold           = var.httpcode_lb_5xx_count_threshold
   alarm_description   = "Average API 5XX load balancer error code count is too high"
   alarm_actions       = var.actions_alarm
   ok_actions          = var.actions_ok
